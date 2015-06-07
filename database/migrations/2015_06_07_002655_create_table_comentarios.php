@@ -21,6 +21,7 @@ class CreateTableComentarios extends Migration {
 			$table -> string('remote_host');
 			$table -> integer('calif_pos') -> default(0);
 			$table -> integer('calif_neg') -> default(0);
+			$table ->.datetime('fecha');
 		});
 	}
 

@@ -14,8 +14,8 @@ class CreateTableCasa extends Migration {
 	{
 		Schema::create('casa', function($table) {
 			$table -> increments('id');
-			$table -> integer('arrendador_id') -> unsigned();
-			$table -> foreign('arrendador_id') -> references('id') -> on('arrendadores');
+			$table -> integer('usuario_arrendador_id') -> unsigned();
+			$table -> foreign('usuario_arrendador_id') -> references('id') -> on('usuarios');
 			$table -> integer('calificacion');
 		});
 	}

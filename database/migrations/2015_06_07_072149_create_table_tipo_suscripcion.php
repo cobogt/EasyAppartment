@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableDetalleUsuarios extends Migration {
+class CreateTableTipoSuscripcion extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,13 @@ class CreateTableDetalleUsuarios extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('detalle_usuario', function($table) {
-			$table -> integer('usuario_id') -> unsigned();
+		Schema::create('tipo_suscripcion', function($table) {
+			$table -> increments('id');
+			$table -> string('descripcion');
+			$table -> integer('duracion');
+			$table -> integer('cliente_id') -> unsigned();
 			$table -> foreign('usuario_id') -> references('id') -> on('usuarios');
-			$table -> string('direccion');
-			$table -> string('telefono');
-			$table -> string('email');
-			$table -> integer('calificacion');
+			$table -> float('precio_unitario') -> default(0);
 		});
 	}
 
@@ -29,7 +29,7 @@ class CreateTableDetalleUsuarios extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('detalle_usuario');
+		Schema::drop('tipo_suscripcion');
 	}
 
 }

@@ -17,7 +17,7 @@ class CreateTableDetalleCasa extends Migration {
 			$table -> string('ciudad');
 			$table -> string('estado');
 			$table -> string('domicilio');
-			$table -> string('palabras_clave', 300) -> nullable();
+			$table -> string('palabras_clave', 400) -> nullable();
 			$table -> float('precio');
 			$table -> integer('latitud');
 			$table -> integer('longitud');

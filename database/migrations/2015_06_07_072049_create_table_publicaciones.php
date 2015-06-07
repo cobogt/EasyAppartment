@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableDetalleServicios extends Migration {
+class CreateTablePublicaciones extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,14 @@ class CreateTableDetalleServicios extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('detalle_servicios', function($table) {
-			$table -> integer('servicio_id') -> unsigned();
-			$table -> foreign('servicio_id') -> references('id') -> on('servicios');
+		Schema::create('publicaciones', function($table) {
+			$table -> increments('id');
 			$table -> integer('casa_id') -> unsigned();
 			$table -> foreign('casa_id') -> references('id') -> on('casa');
+			$table -> integer('usuario_id') -> unsigned();
+			$table -> foreign('usuario_id') -> references('id') -> on('usuarios');
+			$table -> datetime('fecha_creacion');
+			$table -> datetime('fecha_caducidad');
 		});
 	}
 
@@ -27,7 +30,7 @@ class CreateTableDetalleServicios extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('detalle_servicios');
+		Schema::drop('publicaciones');
 	}
 
 }

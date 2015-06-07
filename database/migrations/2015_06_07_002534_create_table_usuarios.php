@@ -16,6 +16,8 @@ class CreateTableUsuarios extends Migration {
 			$table -> increments('id');
 			$table -> string('nombre');
 			$table -> string('password');
+			$table -> integer('tipo_usuario');
+			$table -> integer('privilegios');
 			$table -> datetime('registro');
 			$table -> datetime('ultima_conexion');
 		});
