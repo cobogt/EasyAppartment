@@ -1,10 +1,10 @@
 @extends('layouts.scaffold')
 
 @section('title')
-Registrarse
+Preguntas frecuentes
 @stop
 
-@section('selected_registro')
+@section('selected_faq')
 class="selected"
 @stop
 

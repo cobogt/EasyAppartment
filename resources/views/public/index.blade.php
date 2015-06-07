@@ -8,11 +8,12 @@ Como estar en casa
 	<link rel="stylesheet" href="/css/index.css">
 @stop
 
+@section('selected_inicio')
+class="selected"
+@stop
+
 @section('content')
-<div class="panel panel-danger">
-	<div class="panel-heading">Lol</div>
-	<div class="panel-body">Mem</div>
-</div>
+
 @stop
 
 @section('js')

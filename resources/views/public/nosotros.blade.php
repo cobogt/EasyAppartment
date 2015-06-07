@@ -1,10 +1,10 @@
 @extends('layouts.scaffold')
 
 @section('title')
-Registrarse
+Nosotros
 @stop
 
-@section('selected_registro')
+@section('selected_nosotros')
 class="selected"
 @stop
 
