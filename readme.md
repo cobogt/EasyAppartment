@@ -1,8 +1,6 @@
 ## EasyApartment
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
-
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Nuestra visión es que cualquier estudiante que se aventure en la experiencia de vivir por su cuenta tenga el acceso a una Plataforma para elegir una opción de vivienda confiable y acorde a sus necesidades, un mapa general de acceso a los servicios básicos y en general una guía que le facilite la experiencia que es emprender una nueva vida por su cuenta.
 
 ## Documentación
 
@@ -12,6 +10,6 @@ Documentation for the framework can be found on the [Laravel website](http://lar
 
 Ser el sitio web líder para estudiantes en la facilitación de herramientas en el emprendimiento de una vida independiente.
 
-### License
+### Licecia
 
 OpenSource
