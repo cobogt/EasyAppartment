@@ -13,6 +13,7 @@ class="selected"
 @stop
 
 @section('content')
+<div style="clear:both;"></div>
 
 @stop
 

@@ -1,26 +1,29 @@
 @extends('layouts.base')
 
 @section('header')
-<header class="header-basic-light">
-	<div class="header-limiter">
-
-		<h1><a href="/"><img src="/img/logo.png" alt="" style="max-height: 50px;"></a></h1>
-		<nav>
+<nav class="menu-navigation-round">
 			<a href="/" @yield('selected_inicio')>Inicio</a>
 			<a href="/buscar" @yield('selected_busqueda')>Busqueda</a>
 			<a href="/faq" @yield('selected_faq')>FAQ's</a>
 			<a href="/nosotros" @yield('selected_nosotros')>Nosotros</a>
 			<a href="/registro" @yield('selected_registro')>Registro</a>
 			<a href="/login" @yield('selected_login')>Login</a>
-		</nav>
-	</div>
-</header>
+</nav>
+
 @stop
 
 @section('content-main')
 	<div class="row">
 		<div class="col-lg-2">
-			
+			<aside class="sidebar-left">
+				<a class="company-logo" href="/"><img src="/img/logo.png" alt="" width="80%"></a>
+				<div class="sidebar-links">
+					<a class="link-blue" href="#"><i class="fa fa-search"></i>Buscar</a>
+					<a class="link-red" href="#"><i class="fa fa-heart-o"></i>Mis favoritos</a>
+					<a class="link-green" href="#"><i class="fa fa-map-marker"></i>Mapa extendido</a>
+				</div>
+
+			</aside>
 		</div>
 		<div class="col-lg-10">
 			@yield('content')
@@ -43,15 +46,13 @@
 			<div class="footer-left">
 
 				<p class="footer-links">
-					<a href="#">Inicio</a>
+					<a href="/">Inicio</a>
 					·
-					<a href="#">Contacto</a>
+					<a href="/contacto">Contacto</a>
 					·
-					<a href="#">Publicar casa en renta</a>
+					<a href="/login">Publicar casa</a>
 					·
-					<a href="#">Favoritos</a>
-					·
-					<a href="#">Lugares</a>
+					<a href="/populares">Más populares</a>
 					·
 				</p>
 
@@ -59,4 +60,18 @@
 			</div>
 
 		</footer>
+@stop
+
+@section('script-main')
+	<script>
+
+		$(function () {
+
+			var links = $('.sidebar-links > a');
+			links.on('click', function () {
+				links.removeClass('selected');
+				$(this).addClass('selected');
+			})
+		});
+	</script>
 @stop
